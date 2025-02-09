@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome para los íconos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="imagenes/duke.png">
+</head>
+<body>
+
+<!-- Sección Header -->
+<header class="bg-primary text-white py-4">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#">Antonio Jesús Alguacil Espejo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#sobre-mi">Sobre mí</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#proyectos">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Sección de Presentación (Hero Section) -->
+<section id="inicio" class="d-flex justify-content-center align-items-center text-center position-relative" style="height: 100vh; background: url('imagenes/programacion.jpg') no-repeat center center; background-size: cover;">
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+    <div class="position-relative z-index-1 text-white">
+        <h1>Hola, soy Antonio Jesús Alguacil Espejo</h1>
+        <p class="lead">Bienvenido a mi portafolio personal.</p>
+        <div class="d-flex justify-content-center mt-4">
+            <img src="imagenes/perfil.jpg" alt="Imagen de presentación" class="img-fluid rounded-circle" style="width: 250px; height: 300px;">
+        </div>
+    </div>
+</section>
+
+<style>
+    .justificado {
+        text-align: justify;
+    }
+</style>
+
+<!-- Sección Sobre mí -->
+<section id="sobre-mi" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center">Sobre mí</h2>
+        <p class="justificado">
+            Soy un programador Full Stack con experiencia en una variedad de lenguajes y tecnologías. Me especializo en el desarrollo tanto del lado del cliente como del servidor, lo que me permite crear soluciones completas y eficientes. Con habilidades en Java, PHP, JavaScript, HTML, CSS, y más, soy capaz de construir aplicaciones web robustas, desde la arquitectura backend hasta la experiencia de usuario en el frontend.
+        </p>
+        <p class="justificado">
+            Mi enfoque está en ofrecer soluciones escalables y bien estructuradas, siempre siguiendo las mejores prácticas de desarrollo. Trabajo con bases de datos relacionales y no relacionales, y domino diversas herramientas y frameworks como React, Angular, Spring, Laravel, y Node.js.
+        </p>
+        <p class="justificado">
+            Tengo experiencia creando aplicaciones dinámicas y optimizadas, integrando APIs, y gestionando servidores y despliegue en la nube. Además, me apasiona seguir aprendiendo y estar al tanto de las últimas tendencias tecnológicas, lo que me permite mejorar continuamente en mi trabajo.
+        </p>
+        <p class="justificado">
+            Mi objetivo es desarrollar soluciones tecnológicas que no solo cumplan con los requisitos, sino que ofrezcan una experiencia de usuario excepcional y resultados que superen las expectativas del cliente.
+        </p>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <i class="fas fa-code fa-3x mb-3"></i>
+                <h4>Programación</h4>
+                <p class="justificado">Con una sólida experiencia en desarrollo web y móvil, manejo tecnologías clave como HTML, CSS, JavaScript, Java y frameworks como React y Laravel. Mi enfoque se centra en crear soluciones escalables, optimizadas y fáciles de mantener, tanto para aplicaciones frontend como backend. Además, domino herramientas y frameworks modernos que permiten crear aplicaciones completas e integradas de alta calidad.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="fas fa-pencil-alt fa-3x mb-3"></i>
+                <h4>Diseño</h4>
+                <p class="justificado">Mi habilidad para diseñar interfaces intuitivas y atractivas se combina con un enfoque centrado en la experiencia del usuario (UX). Trabajo en la creación de interfaces visualmente atractivas, accesibles y fáciles de usar, asegurando que cada diseño cumpla con las necesidades del usuario final. Me apasiona diseñar flujos de navegación simples y agradables, siempre alineados con las últimas tendencias en diseño web y móvil.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="fas fa-users fa-3x mb-3"></i>
+                <h4>Trabajo en equipo</h4>
+                <p class="justificado">El trabajo colaborativo es uno de mis pilares fundamentales. Disfruto trabajar en equipos multidisciplinarios, compartiendo ideas y buscando las mejores soluciones a los problemas. Mi capacidad para comunicarme de manera clara y efectiva con diseñadores, desarrolladores y clientes me permite lograr objetivos comunes, crear productos de calidad y entregar proyectos exitosos dentro de los plazos establecidos.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<br>
+<!-- Contenedor para centrar el botón -->
+<div class="d-flex justify-content-center mb-4">
+    <!-- Botón de contacto -->
+    <a href="#contacto" class="btn btn-light">Contáctame</a>
+</div>
+<!-- Sección Proyectos -->
+<section id="proyectos" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Mis Proyectos</h2>
+        <div class="row justify-content-center">
+            <!-- Proyecto 1 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="imagenes/lyra.jpg" class="card-img-top" alt="Proyecto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">LYRA</h5>
+                        <p class="card-text">Lyra es una marca de alta relojería fundada en 2024 en España, que fusiona la precisión de la ingeniería relojera con el arte del diseño de lujo. Creada por Antonio Jesús Alguacil Espejo, la marca nació del deseo de producir piezas excepcionales que reflejan no solo una alta tecnología, sino también un profundo respeto por la tradición relojera. El primer modelo, el <strong>Lyra Tourbillon</strong>, incorpora complicaciones clásicas como un tourbillon, una fase lunar y un cronómetro, todo esto en una caja de oro blanco, demostrando un equilibrio perfecto entre lujo y funcionalidad. Este proyecto ha sido desarrollado utilizando tecnologías modernas como JavaScript, PHP, HTML y CSS.</p>
+                        
+                        <!-- Botón para ver más -->
+                        <button class="btn btn-primary" id="verMasBtn" onclick="mostrarMas()">Ver más</button>
+
+                        <!-- Descripción extendida -->
+                        <p id="descripcionExtendida" class="card-text" style="display:none;">
+                            Cada reloj de <strong>Lyra</strong> es elaborado con materiales de la más alta calidad y fabricado a mano en Suiza, asegurando una durabilidad y precisión inigualables. Además de relojería, la marca expande su enfoque hacia la moda de alta gama, con una línea que celebra la estética italiana y la elegancia contemporánea. El logo de la marca, una flor de lis, simboliza la nobleza, distinción y artesanía que define a <strong>Lyra</strong>. Cada pieza es una declaración de estilo, perfección y sofisticación. Todo el desarrollo web detrás de esta marca ha sido realizado con una sólida base tecnológica en JavaScript, PHP, HTML y CSS.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Script para mostrar más información -->
+<script>
+    function mostrarMas() {
+        var descripcion = document.getElementById("descripcionExtendida");
+        var boton = document.getElementById("verMasBtn");
+
+        // Toggle the visibility of the extended description
+        if (descripcion.style.display === "none") {
+            descripcion.style.display = "block";
+            boton.textContent = "Ver menos"; // Change button text to "Ver menos"
+        } else {
+            descripcion.style.display = "none";
+            boton.textContent = "Ver más"; // Change button text back to "Ver más"
+        }
+    }
+</script>
+
+<!-- Sección Contacto -->
+<section id="contacto" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Contacto</h2>
+        <form>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <div>
+            <a href="https://www.instagram.com/_aj_.2001/" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/" class="text-white mx-2"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/ajrepos" class="text-white mx-2"><i class="fab fa-github"></i></a>
+        </div>
+
+        <!-- Botón para abrir el modal dentro del footer -->
+        <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#cookiesModal">
+            Ver Política de Cookies
+        </button>
+        
+        <p class="mt-3">&copy; 2024 [Antonio Jesús Alguacil Espejo]. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<!-- Modal de Política de Cookies -->
+<div class="modal fade" id="cookiesModal" tabindex="-1" aria-labelledby="cookiesModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cookiesModalLabel">Política de Cookies</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <p>Este sitio web utiliza cookies para mejorar la experiencia del usuario. Al continuar navegando, aceptas el uso de cookies.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>
