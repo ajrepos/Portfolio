@@ -3,37 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio</title>
-    <!-- Bootstrap CSS -->
+    <title>My Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- FontAwesome para los íconos -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="imagenes/duke.png">
 </head>
 <body>
 
-<!-- Sección Header -->
 <header class="bg-primary text-white py-4">
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <a class="navbar-brand text-white" href="#">Antonio Jesús Alguacil Espejo</a>
+            <a class="navbar-brand text-white" href="#" data-i18n="name">Antonio Jesús Alguacil Espejo</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#inicio">Inicio</a>
+                        <a class="nav-link text-white" href="#inicio" data-i18n="nav.home">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#sobre-mi">Sobre mí</a>
+                        <a class="nav-link text-white" href="#sobre-mi" data-i18n="nav.about">Sobre mí</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#proyectos">Proyectos</a>
+                        <a class="nav-link text-white" href="#proyectos" data-i18n="nav.projects">Proyectos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#contacto">Contacto</a>
+                        <a class="nav-link text-white" href="#contacto" data-i18n="nav.contact">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link text-white" id="languageToggle">English</button>
                     </li>
                 </ul>
             </div>
@@ -41,86 +40,64 @@
     </nav>
 </header>
 
-<!-- Sección de Presentación (Hero Section) -->
 <section id="inicio" class="d-flex justify-content-center align-items-center text-center position-relative" style="height: 100vh; background: url('imagenes/programacion.jpg') no-repeat center center; background-size: cover;">
     <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
     <div class="position-relative z-index-1 text-white">
-        <h1>Hola, soy Antonio Jesús Alguacil Espejo</h1>
-        <p class="lead">Bienvenido a mi portafolio personal.</p>
+        <h1 data-i18n="hero.title">Hola, soy Antonio Jesús Alguacil Espejo</h1>
+        <p class="lead" data-i18n="hero.subtitle">Bienvenido a mi portafolio personal.</p>
         <div class="d-flex justify-content-center mt-4">
-            <img src="imagenes/perfil.jpg" alt="Imagen de presentación" class="img-fluid rounded-circle" style="width: 250px; height: 300px;">
+            <img src="imagenes/perfil.jpg" alt="Presentation image" class="img-fluid rounded-circle" style="width: 250px; height: 300px;">
         </div>
     </div>
 </section>
 
 <style>
-    .justificado {
-        text-align: justify;
-    }
+    .justificado { text-align: justify; }
 </style>
 
-<!-- Sección Sobre mí -->
 <section id="sobre-mi" class="py-5 bg-light">
     <div class="container">
-        <h2 class="text-center">Sobre mí</h2>
-        <p class="justificado">
-            Soy un programador Full Stack con experiencia en una variedad de lenguajes y tecnologías. Me especializo en el desarrollo tanto del lado del cliente como del servidor, lo que me permite crear soluciones completas y eficientes. Con habilidades en Java, PHP, JavaScript, HTML, CSS, y más, soy capaz de construir aplicaciones web robustas, desde la arquitectura backend hasta la experiencia de usuario en el frontend.
-        </p>
-        <p class="justificado">
-            Mi enfoque está en ofrecer soluciones escalables y bien estructuradas, siempre siguiendo las mejores prácticas de desarrollo. Trabajo con bases de datos relacionales y no relacionales, y domino diversas herramientas y frameworks como React, Angular, Spring, Laravel, y Node.js.
-        </p>
-        <p class="justificado">
-            Tengo experiencia creando aplicaciones dinámicas y optimizadas, integrando APIs, y gestionando servidores y despliegue en la nube. Además, me apasiona seguir aprendiendo y estar al tanto de las últimas tendencias tecnológicas, lo que me permite mejorar continuamente en mi trabajo.
-        </p>
-        <p class="justificado">
-            Mi objetivo es desarrollar soluciones tecnológicas que no solo cumplan con los requisitos, sino que ofrezcan una experiencia de usuario excepcional y resultados que superen las expectativas del cliente.
-        </p>
+        <h2 class="text-center" data-i18n="about.title">Sobre mí</h2>
+        <p class="justificado" data-i18n="about.p1"></p>
+        <p class="justificado" data-i18n="about.p2"></p>
+        <p class="justificado" data-i18n="about.p3"></p>
+        <p class="justificado" data-i18n="about.p4"></p>
         <div class="row text-center">
             <div class="col-md-4">
                 <i class="fas fa-code fa-3x mb-3"></i>
-                <h4>Programación</h4>
-                <p class="justificado">Con una sólida experiencia en desarrollo web y móvil, manejo tecnologías clave como HTML, CSS, JavaScript, Java y frameworks como React y Laravel. Mi enfoque se centra en crear soluciones escalables, optimizadas y fáciles de mantener, tanto para aplicaciones frontend como backend. Además, domino herramientas y frameworks modernos que permiten crear aplicaciones completas e integradas de alta calidad.</p>
+                <h4 data-i18n="about.programming">Programación</h4>
+                <p class="justificado" data-i18n="about.programmingText"></p>
             </div>
             <div class="col-md-4">
                 <i class="fas fa-pencil-alt fa-3x mb-3"></i>
-                <h4>Diseño</h4>
-                <p class="justificado">Mi habilidad para diseñar interfaces intuitivas y atractivas se combina con un enfoque centrado en la experiencia del usuario (UX). Trabajo en la creación de interfaces visualmente atractivas, accesibles y fáciles de usar, asegurando que cada diseño cumpla con las necesidades del usuario final. Me apasiona diseñar flujos de navegación simples y agradables, siempre alineados con las últimas tendencias en diseño web y móvil.</p>
+                <h4 data-i18n="about.design">Diseño</h4>
+                <p class="justificado" data-i18n="about.designText"></p>
             </div>
             <div class="col-md-4">
                 <i class="fas fa-users fa-3x mb-3"></i>
-                <h4>Trabajo en equipo</h4>
-                <p class="justificado">El trabajo colaborativo es uno de mis pilares fundamentales. Disfruto trabajar en equipos multidisciplinarios, compartiendo ideas y buscando las mejores soluciones a los problemas. Mi capacidad para comunicarme de manera clara y efectiva con diseñadores, desarrolladores y clientes me permite lograr objetivos comunes, crear productos de calidad y entregar proyectos exitosos dentro de los plazos establecidos.</p>
+                <h4 data-i18n="about.teamwork">Trabajo en equipo</h4>
+                <p class="justificado" data-i18n="about.teamworkText"></p>
             </div>
         </div>
     </div>
 </section>
 
-<br>
-<!-- Contenedor para centrar el botón -->
 <div class="d-flex justify-content-center mb-4">
-    <!-- Botón de contacto -->
-    <a href="#contacto" class="btn btn-light">Contáctame</a>
+    <a href="#contacto" class="btn btn-light" data-i18n="contactme">Contáctame</a>
 </div>
-<!-- Sección Proyectos -->
+
 <section id="proyectos" class="py-5">
     <div class="container">
-        <h2 class="text-center mb-4">Mis Proyectos</h2>
+        <h2 class="text-center mb-4" data-i18n="projects.title">Mis Proyectos</h2>
         <div class="row justify-content-center">
-            <!-- Proyecto 1 -->
             <div class="col-md-4">
                 <div class="card">
-                    <img src="imagenes/lyra.jpg" class="card-img-top" alt="Proyecto 1">
+                    <img src="imagenes/lyra.jpg" class="card-img-top" alt="Project 1">
                     <div class="card-body">
-                        <h5 class="card-title">LYRA</h5>
-                        <p class="card-text">Lyra es una marca de alta relojería fundada en 2024 en España, que fusiona la precisión de la ingeniería relojera con el arte del diseño de lujo. Creada por Antonio Jesús Alguacil Espejo, la marca nació del deseo de producir piezas excepcionales que reflejan no solo una alta tecnología, sino también un profundo respeto por la tradición relojera. El primer modelo, el <strong>Lyra Tourbillon</strong>, incorpora complicaciones clásicas como un tourbillon, una fase lunar y un cronómetro, todo esto en una caja de oro blanco, demostrando un equilibrio perfecto entre lujo y funcionalidad. Este proyecto ha sido desarrollado utilizando tecnologías modernas como JavaScript, PHP, HTML y CSS.</p>
-                        
-                        <!-- Botón para ver más -->
-                        <button class="btn btn-primary" id="verMasBtn" onclick="mostrarMas()">Ver más</button>
-
-                        <!-- Descripción extendida -->
-                        <p id="descripcionExtendida" class="card-text" style="display:none;">
-                            Cada reloj de <strong>Lyra</strong> es elaborado con materiales de la más alta calidad y fabricado a mano en Suiza, asegurando una durabilidad y precisión inigualables. Además de relojería, la marca expande su enfoque hacia la moda de alta gama, con una línea que celebra la estética italiana y la elegancia contemporánea. El logo de la marca, una flor de lis, simboliza la nobleza, distinción y artesanía que define a <strong>Lyra</strong>. Cada pieza es una declaración de estilo, perfección y sofisticación. Todo el desarrollo web detrás de esta marca ha sido realizado con una sólida base tecnológica en JavaScript, PHP, HTML y CSS.
-                        </p>
+                        <h5 class="card-title" data-i18n="projects.lyraTitle">LYRA</h5>
+                        <p class="card-text" data-i18n="projects.lyraDesc"></p>
+                        <button class="btn btn-primary" id="verMasBtn" data-i18n="see_more">Ver más</button>
+                        <p id="descripcionExtendida" class="card-text" style="display:none;" data-i18n="projects.lyraExtended"></p>
                     </div>
                 </div>
             </div>
@@ -128,46 +105,27 @@
     </div>
 </section>
 
-<!-- Script para mostrar más información -->
-<script>
-    function mostrarMas() {
-        var descripcion = document.getElementById("descripcionExtendida");
-        var boton = document.getElementById("verMasBtn");
-
-        // Toggle the visibility of the extended description
-        if (descripcion.style.display === "none") {
-            descripcion.style.display = "block";
-            boton.textContent = "Ver menos"; // Change button text to "Ver menos"
-        } else {
-            descripcion.style.display = "none";
-            boton.textContent = "Ver más"; // Change button text back to "Ver más"
-        }
-    }
-</script>
-
-<!-- Sección Contacto -->
 <section id="contacto" class="py-5 bg-light">
     <div class="container">
-        <h2 class="text-center mb-4">Contacto</h2>
+        <h2 class="text-center mb-4" data-i18n="contact.title">Contacto</h2>
         <form>
             <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre</label>
+                <label for="nombre" class="form-label" data-i18n="contact.name">Nombre</label>
                 <input type="text" class="form-control" id="nombre" required>
             </div>
             <div class="mb-3">
-                <label for="email" class="form-label">Correo Electrónico</label>
+                <label for="email" class="form-label" data-i18n="contact.email">Correo Electrónico</label>
                 <input type="email" class="form-control" id="email" required>
             </div>
             <div class="mb-3">
-                <label for="mensaje" class="form-label">Mensaje</label>
+                <label for="mensaje" class="form-label" data-i18n="contact.message">Mensaje</label>
                 <textarea class="form-control" id="mensaje" rows="4" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="submit" class="btn btn-primary" data-i18n="contact.submit">Enviar</button>
         </form>
     </div>
 </section>
 
-<!-- Footer -->
 <footer class="bg-dark text-white py-4">
     <div class="container text-center">
         <div>
@@ -175,37 +133,194 @@
             <a href="https://www.linkedin.com/" class="text-white mx-2"><i class="fab fa-linkedin"></i></a>
             <a href="https://github.com/ajrepos" class="text-white mx-2"><i class="fab fa-github"></i></a>
         </div>
-
-        <!-- Botón para abrir el modal dentro del footer -->
-        <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#cookiesModal">
+        <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#cookiesModal" data-i18n="cookies.button">
             Ver Política de Cookies
         </button>
-        
-        <p class="mt-3">&copy; 2024 [Antonio Jesús Alguacil Espejo]. Todos los derechos reservados.</p>
+        <p class="mt-3">&copy; 2024 Antonio Jesús Alguacil Espejo. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
     </div>
 </footer>
 
-<!-- Modal de Política de Cookies -->
 <div class="modal fade" id="cookiesModal" tabindex="-1" aria-labelledby="cookiesModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="cookiesModalLabel">Política de Cookies</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                <h5 class="modal-title" id="cookiesModalLabel" data-i18n="cookies.title">Política de Cookies</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <p>Este sitio web utiliza cookies para mejorar la experiencia del usuario. Al continuar navegando, aceptas el uso de cookies.</p>
+                <p data-i18n="cookies.body"></p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-i18n="cookies.close">Cerrar</button>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const translations = {
+        en: {
+            name: "Antonio Jesús Alguacil Espejo",
+            nav: {
+                home: "Home",
+                about: "About Me",
+                projects: "Projects",
+                contact: "Contact"
+            },
+            hero: {
+                title: "Hi, I'm Antonio Jesús Alguacil Espejo",
+                subtitle: "Welcome to my personal portfolio"
+            },
+            about: {
+                title: "About Me",
+                p1: "I am a Full Stack programmer with experience in various languages and technologies. I specialize in both client-side and server-side development, enabling me to create complete and efficient solutions. With skills in Java, PHP, JavaScript, HTML, CSS, and more, I can build robust web applications from backend architecture to frontend user experience.",
+                p2: "My focus is on delivering scalable and well-structured solutions, always following best development practices. I work with relational and non-relational databases and master various tools and frameworks like React, Angular, Spring, Laravel, and Node.js.",
+                p3: "I have experience creating dynamic and optimized applications, integrating APIs, and managing servers and cloud deployment. Additionally, I'm passionate about continuous learning and staying updated with the latest tech trends.",
+                p4: "My goal is to develop technological solutions that not only meet requirements but provide exceptional user experience and exceed client expectations.",
+                programming: "Programming",
+                programmingText: "With solid experience in web and mobile development, I handle key technologies like HTML, CSS, JavaScript, Java, and frameworks like React and Laravel. I focus on creating scalable, optimized solutions for both frontend and backend applications.",
+                design: "Design",
+                designText: "I design intuitive interfaces with a user-centered approach, ensuring accessibility and usability while following the latest web and mobile design trends.",
+                teamwork: "Teamwork",
+                teamworkText: "I thrive in multidisciplinary teams, communicating effectively with designers, developers, and clients to achieve common goals and deliver successful projects."
+            },
+            contactme: "Contact Me",
+            projects: {
+                title: "My Projects",
+                lyraTitle: "LYRA",
+                lyraDesc: "Lyra is a luxury watchmaking brand founded in 2024 in Spain, combining precision engineering with elegant design. Developed using JavaScript, PHP, HTML, and CSS.",
+                lyraExtended: "Each Lyra watch is handcrafted in Switzerland with premium materials, expanding into high-end fashion with Italian-inspired aesthetics and contemporary elegance."
+            },
+            see_more: "See more",
+            see_less: "See less",
+            contact: {
+                title: "Contact",
+                name: "Name",
+                email: "Email",
+                message: "Message",
+                submit: "Send"
+            },
+            footer: {
+                rights: "All rights reserved."
+            },
+            cookies: {
+                title: "Cookie Policy",
+                body: "This website uses cookies to enhance user experience. By continuing to browse, you agree to our use of cookies.",
+                close: "Close",
+                button: "View Cookie Policy"
+            }
+        },
+        es: {
+            name: "Antonio Jesús Alguacil Espejo",
+            nav: {
+                home: "Inicio",
+                about: "Sobre mí",
+                projects: "Proyectos",
+                contact: "Contacto"
+            },
+            hero: {
+                title: "Hola, soy Antonio Jesús Alguacil Espejo",
+                subtitle: "Bienvenido a mi portafolio personal"
+            },
+            about: {
+                title: "Sobre mí",
+                p1: "Soy un programador Full Stack con experiencia en diversos lenguajes y tecnologías. Me especializo en desarrollo tanto del lado del cliente como del servidor, creando soluciones completas y eficientes. Con habilidades en Java, PHP, JavaScript, HTML, CSS y más, construyo aplicaciones web robustas.",
+                p2: "Mi enfoque es ofrecer soluciones escalables y bien estructuradas, siguiendo las mejores prácticas. Trabajo con bases de datos relacionales y no relacionales, y domino herramientas como React, Angular, Spring, Laravel y Node.js.",
+                p3: "Tengo experiencia creando aplicaciones dinámicas, integrando APIs y gestionando servidores en la nube. Me apasiona aprender y mantenerme actualizado con las últimas tendencias tecnológicas.",
+                p4: "Mi objetivo es desarrollar soluciones tecnológicas que superen expectativas y ofrezcan una experiencia de usuario excepcional.",
+                programming: "Programación",
+                programmingText: "Con experiencia en desarrollo web y móvil, manejo tecnologías clave como HTML, CSS, JavaScript, Java y frameworks como React y Laravel, creando soluciones escalables y optimizadas.",
+                design: "Diseño",
+                designText: "Diseño interfaces intuitivas centradas en la experiencia del usuario, asegurando accesibilidad y alineación con las últimas tendencias en diseño web y móvil.",
+                teamwork: "Trabajo en equipo",
+                teamworkText: "Disfruto trabajar en equipos multidisciplinarios, comunicándome efectivamente para lograr objetivos comunes y entregar proyectos exitosos."
+            },
+            contactme: "Contáctame",
+            projects: {
+                title: "Mis Proyectos",
+                lyraTitle: "LYRA",
+                lyraDesc: "Lyra es una marca de relojería de lujo fundada en 2024 en España, combinando ingeniería de precisión con diseño elegante. Desarrollado con JavaScript, PHP, HTML y CSS.",
+                lyraExtended: "Cada reloj Lyra es fabricado a mano en Suiza con materiales premium, expandiéndose hacia la moda de alta gama con estética italiana y elegancia contemporánea."
+            },
+            see_more: "Ver más",
+            see_less: "Ver menos",
+            contact: {
+                title: "Contacto",
+                name: "Nombre",
+                email: "Correo Electrónico",
+                message: "Mensaje",
+                submit: "Enviar"
+            },
+            footer: {
+                rights: "Todos los derechos reservados."
+            },
+            cookies: {
+                title: "Política de Cookies",
+                body: "Este sitio web utiliza cookies para mejorar la experiencia de usuario. Al continuar navegando, aceptas nuestro uso de cookies.",
+                close: "Cerrar",
+                button: "Ver Política de Cookies"
+            }
+        }
+    };
 
+   
+    document.addEventListener('DOMContentLoaded', function() {
+        let currentLang = 'es';
+        const toggleButton = document.getElementById('languageToggle');
+        
+        // Nueva función para manejar el toggle de la descripción
+        function toggleDescription() {
+            const descripcion = document.getElementById("descripcionExtendida");
+            const boton = document.getElementById("verMasBtn");
+            
+            if (descripcion.style.display === "none") {
+                descripcion.style.display = "block";
+                boton.textContent = translations[currentLang].see_less;
+            } else {
+                descripcion.style.display = "none";
+                boton.textContent = translations[currentLang].see_more;
+            }
+        }
 
+        function updateTranslations(lang) {
+            document.documentElement.lang = lang;
+            toggleButton.textContent = lang === 'es' ? 'English' : 'Español';
+            
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const keys = element.getAttribute('data-i18n').split('.');
+                let translation = translations[lang];
+                keys.forEach(key => translation = translation?.[key]);
+                
+                if (translation) {
+                    if (element.tagName === 'INPUT' && element.type === 'submit') {
+                        element.value = translation;
+                    } else {
+                        element.textContent = translation;
+                    }
+                }
+            });
+
+            // Actualizar estado del botón "Ver más"
+            const descExt = document.getElementById("descripcionExtendida");
+            const verMasBtn = document.getElementById("verMasBtn");
+            if (descExt.style.display === 'block') {
+                verMasBtn.textContent = translations[lang].see_less;
+            } else {
+                verMasBtn.textContent = translations[lang].see_more;
+            }
+        }
+
+        // Event listeners
+        toggleButton.addEventListener('click', () => {
+            currentLang = currentLang === 'es' ? 'en' : 'es';
+            updateTranslations(currentLang);
+        });
+        
+        document.getElementById("verMasBtn").addEventListener('click', toggleDescription);
+
+        updateTranslations(currentLang);
+    });
+</script>
 </body>
 </html>
