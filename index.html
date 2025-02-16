@@ -1,326 +1,724 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="imagenes/duke.png">
-</head>
-<body>
-
-<header class="bg-primary text-white py-4">
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="imagenes/duke.png" />
+    <style>
+      .justificado {
+        text-align: justify;
+      }
+      .skill-badge {
+        margin: 2px;
+      }
+      .modal-backdrop.show {
+        z-index: 1040 !important;
+      }
+      .modal {
+        z-index: 1055 !important;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="bg-primary text-white py-4">
+      <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <a class="navbar-brand text-white" href="#" data-i18n="name">Antonio Jesús Alguacil Espejo</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#inicio" data-i18n="nav.home">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#sobre-mi" data-i18n="nav.about">Sobre mí</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#proyectos" data-i18n="nav.projects">Proyectos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#contacto" data-i18n="nav.contact">Contacto</a>
-                    </li>
-                    <li class="nav-item">
-                        <button class="nav-link text-white" id="languageToggle">English</button>
-                    </li>
-                </ul>
-            </div>
+          <a class="navbar-brand text-white" href="#" data-i18n="name"
+            >Antonio Jesús Alguacil Espejo</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link text-white"
+                  href="#inicio"
+                  data-i18n="nav.home"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-white"
+                  href="#sobre-mi"
+                  data-i18n="nav.about"
+                  >Sobre mí</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-white"
+                  href="#formacion"
+                  data-i18n="nav.education"
+                  >Formación</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-white"
+                  href="#habilidades"
+                  data-i18n="nav.skills"
+                  >Habilidades</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-white"
+                  href="#proyectos"
+                  data-i18n="nav.projects"
+                  >Proyectos</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-white"
+                  href="#contacto"
+                  data-i18n="nav.contact"
+                  >Contacto</a
+                >
+              </li>
+              <li class="nav-item">
+                <button class="nav-link text-white" id="languageToggle">
+                  English
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
-    </nav>
-</header>
+      </nav>
+    </header>
 
-<section id="inicio" class="d-flex justify-content-center align-items-center text-center position-relative" style="height: 100vh; background: url('imagenes/programacion.jpg') no-repeat center center; background-size: cover;">
-    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
-    <div class="position-relative z-index-1 text-white">
+    <section
+      id="inicio"
+      class="d-flex justify-content-center align-items-center text-center position-relative"
+      style="
+        height: 100vh;
+        background: url('imagenes/programacion.jpg') no-repeat center center;
+        background-size: cover;
+      "
+    >
+      <div
+        class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"
+      ></div>
+      <div class="position-relative z-index-1 text-white">
         <h1 data-i18n="hero.title">Hola, soy Antonio Jesús Alguacil Espejo</h1>
-        <p class="lead" data-i18n="hero.subtitle">Bienvenido a mi portafolio personal.</p>
+        <p class="lead" data-i18n="hero.subtitle">
+          Bienvenido a mi portafolio personal.
+        </p>
         <div class="d-flex justify-content-center mt-4">
-            <img src="imagenes/perfil.jpg" alt="Presentation image" class="img-fluid rounded-circle" style="width: 250px; height: 300px;">
+          <img
+            src="imagenes/perfil.jpg"
+            alt="Presentation image"
+            class="img-fluid rounded-circle"
+            style="width: 250px; height: 300px"
+          />
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<style>
-    .justificado { text-align: justify; }
-</style>
-
-<section id="sobre-mi" class="py-5 bg-light">
-    <div class="container">
+    <section id="sobre-mi" class="py-5 bg-light">
+      <div class="container">
         <h2 class="text-center" data-i18n="about.title">Sobre mí</h2>
         <p class="justificado" data-i18n="about.p1"></p>
         <p class="justificado" data-i18n="about.p2"></p>
         <p class="justificado" data-i18n="about.p3"></p>
         <p class="justificado" data-i18n="about.p4"></p>
         <div class="row text-center">
-            <div class="col-md-4">
-                <i class="fas fa-code fa-3x mb-3"></i>
-                <h4 data-i18n="about.programming">Programación</h4>
-                <p class="justificado" data-i18n="about.programmingText"></p>
-            </div>
-            <div class="col-md-4">
-                <i class="fas fa-pencil-alt fa-3x mb-3"></i>
-                <h4 data-i18n="about.design">Diseño</h4>
-                <p class="justificado" data-i18n="about.designText"></p>
-            </div>
-            <div class="col-md-4">
-                <i class="fas fa-users fa-3x mb-3"></i>
-                <h4 data-i18n="about.teamwork">Trabajo en equipo</h4>
-                <p class="justificado" data-i18n="about.teamworkText"></p>
-            </div>
+          <div class="col-md-4">
+            <i class="fas fa-code fa-3x mb-3"></i>
+            <h4 data-i18n="about.programming">Programación</h4>
+            <p class="justificado" data-i18n="about.programmingText"></p>
+          </div>
+          <div class="col-md-4">
+            <i class="fas fa-pencil-alt fa-3x mb-3"></i>
+            <h4 data-i18n="about.design">Diseño</h4>
+            <p class="justificado" data-i18n="about.designText"></p>
+          </div>
+          <div class="col-md-4">
+            <i class="fas fa-users fa-3x mb-3"></i>
+            <h4 data-i18n="about.teamwork">Trabajo en equipo</h4>
+            <p class="justificado" data-i18n="about.teamworkText"></p>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<div class="d-flex justify-content-center mb-4">
-    <a href="#contacto" class="btn btn-light" data-i18n="contactme">Contáctame</a>
-</div>
+    <section id="formacion" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4" data-i18n="education.title">Formación</h2>
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h4 class="card-title" data-i18n="education.formal">
+                  Educación Reglada
+                </h4>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item" data-i18n="education.eso">ESO</li>
+                  <li class="list-group-item" data-i18n="education.cfgs">
+                    Ciclo Formativo Grado Medio - Sistemas Microinformáticos y
+                    Redes
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h4 class="card-title" data-i18n="education.complementary">
+                  Formación Complementaria
+                </h4>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Cisco Systems - Redes</li>
+                  <li class="list-group-item">Ethical Hacking y Pentesting</li>
+                  <li class="list-group-item">Docker y AWS</li>
+                  <li class="list-group-item">MySQL y Bases de Datos</li>
+                  <li class="list-group-item">Java</li>
+                  <li class="list-group-item">Laravel y React</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section id="proyectos" class="py-5">
-    <div class="container">
-        <h2 class="text-center mb-4" data-i18n="projects.title">Mis Proyectos</h2>
-        <div class="row justify-content-center">
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="imagenes/lyra.jpg" class="card-img-top" alt="Project 1">
-                    <div class="card-body">
-                        <h5 class="card-title" data-i18n="projects.lyraTitle">LYRA</h5>
-                        <p class="card-text" data-i18n="projects.lyraDesc"></p>
-                        <button class="btn btn-primary" id="verMasBtn" data-i18n="see_more">Ver más</button>
-                        <p id="descripcionExtendida" class="card-text" style="display:none;" data-i18n="projects.lyraExtended"></p>
-                    </div>
+    <!-- Añade esto después de la sección de Formación -->
+    <section id="experiencia" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-4" data-i18n="experience.title">
+          Experiencia
+        </h2>
+        <div class="row">
+          <!-- IMIBIC -->
+          <div class="col-md-6 mb-4">
+            <div class="card h-100">
+              <div class="card-body text-center">
+                <img
+                  src="imagenes/logoimibic.png"
+                  alt="Logo IMIBIC"
+                  class="img-fluid mb-3"
+                  style="max-height: 80px"
+                />
+                <h4 data-i18n="experience.imibic">IMIBIC</h4>
+                <p class="text-muted" data-i18n="experience.internshipDuration">
+                  3 meses de prácticas
+                </p>
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+                    <i class="fas fa-laptop-code me-2"></i>
+                    <span data-i18n="experience.webdev">Desarrollo web</span>
+                  </li>
+                  <li class="mb-2">
+                    <i class="fas fa-shield-alt me-2"></i>
+                    <span data-i18n="experience.pentesting"
+                      >Pentesting y seguridad</span
+                    >
+                  </li>
+                  <li class="mb-2">
+                    <i class="fas fa-database me-2"></i>
+                    <span data-i18n="experience.databases"
+                      >Gestión de bases de datos</span
+                    >
+                  </li>
+                  <li>
+                    <i class="fas fa-server me-2"></i>
+                    <span data-i18n="experience.servers"
+                      >Montaje y configuración de servidores</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Clases particulares -->
+          <div class="col-md-6 mb-4">
+            <div class="card h-100">
+              <div class="card-body text-center">
+                <img
+                  src="imagenes/profesor.jpg"
+                  alt="Logo profesor"
+                  class="img-fluid mb-3"
+                  style="max-height: 80px"
+                />
+                <h4 data-i18n="experience.tutoring">
+                  Profesor de Clases particulares
+                </h4>
+                <p class="text-muted" data-i18n="experience.tutoringDuration">
+                  2 años
+                </p>
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+                    <i class="fas fa-chalkboard-teacher me-2"></i>
+                    <span data-i18n="experience.subjects"
+                      >Programación, Redes, Ciberseguridad, Ofimatica, Bases de
+                      datos, Cloud computing</span
+                    >
+                  </li>
+                  <li class="mb-2">
+                    <i class="fas fa-users me-2"></i>
+                    <span data-i18n="experience.students"
+                      >+20 alumnos formados</span
+                    >
+                  </li>
+                  <li>
+                    <i class="fas fa-certificate me-2"></i>
+                    <span data-i18n="experience.preparation"
+                      >Preparación para certificaciones y exámenes
+                      escolares</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="habilidades" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-4" data-i18n="skills.title">Habilidades</h2>
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h4 class="card-title" data-i18n="skills.technical">
+                  Técnicas
+                </h4>
+                <div class="d-flex flex-wrap">
+                  <span class="badge bg-primary skill-badge"
+                    >Programación Full Stack</span
+                  >
+                  <span class="badge bg-primary skill-badge"
+                    >Desarrollo Web</span
+                  >
+                  <span class="badge bg-primary skill-badge">Redes</span>
+                  <span class="badge bg-primary skill-badge"
+                    >Seguridad Informática</span
+                  >
+                  <span class="badge bg-primary skill-badge"
+                    >Bases de Datos</span
+                  >
+                  <span class="badge bg-primary skill-badge"
+                    >Cloud Computing</span
+                  >
                 </div>
+              </div>
             </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h4 class="card-title" data-i18n="skills.soft">Blandas</h4>
+                <div class="d-flex flex-wrap">
+                  <span
+                    class="badge bg-success skill-badge"
+                    data-i18n="skills.teamwork"
+                    >Trabajo en equipo</span
+                  >
+                  <span class="badge bg-success skill-badge"
+                    >Comunicación efectiva</span
+                  >
+                  <span class="badge bg-success skill-badge"
+                    >Resolución de problemas</span
+                  >
+                  <span class="badge bg-success skill-badge"
+                    >Adaptabilidad</span
+                  >
+                  <span class="badge bg-success skill-badge">Liderazgo</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-</section>
+        <div class="mt-4 text-center">
+          <h4 data-i18n="skills.languages">Idiomas</h4>
+          <p class="mb-0" data-i18n="skills.english">Inglés - Nivel B1</p>
+        </div>
+      </div>
+    </section>
 
-<section id="contacto" class="py-5 bg-light">
-    <div class="container">
+    <section id="proyectos" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4" data-i18n="projects.title">
+          Mis Proyectos
+        </h2>
+        <div class="row justify-content-center">
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img
+                src="imagenes/lyra.jpg"
+                class="card-img-top"
+                alt="Project 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title" data-i18n="projects.lyraTitle">LYRA</h5>
+                <p class="card-text" data-i18n="projects.lyraDesc"></p>
+                <button
+                  class="btn btn-primary"
+                  id="verMasBtn"
+                  data-i18n="see_more"
+                >
+                  Ver más
+                </button>
+                <p
+                  id="descripcionExtendida"
+                  class="card-text"
+                  style="display: none"
+                  data-i18n="projects.lyraExtended"
+                ></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="py-5">
+      <div class="container">
         <h2 class="text-center mb-4" data-i18n="contact.title">Contacto</h2>
-        <form>
-            <div class="mb-3">
-                <label for="nombre" class="form-label" data-i18n="contact.name">Nombre</label>
-                <input type="text" class="form-control" id="nombre" required>
+        <div class="row justify-content-center">
+          <!-- Añadida clase justify-content-center -->
+          <div class="col-md-6 mb-4">
+            <div class="card h-100">
+              <div class="card-body text-center">
+                <h4><i class="fas fa-envelope me-2"></i>Email</h4>
+                <p class="mb-0">antonioalguacil49@gmail.com</p>
+              </div>
             </div>
-            <div class="mb-3">
-                <label for="email" class="form-label" data-i18n="contact.email">Correo Electrónico</label>
-                <input type="email" class="form-control" id="email" required>
-            </div>
-            <div class="mb-3">
-                <label for="mensaje" class="form-label" data-i18n="contact.message">Mensaje</label>
-                <textarea class="form-control" id="mensaje" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary" data-i18n="contact.submit">Enviar</button>
-        </form>
-    </div>
-</section>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<footer class="bg-dark text-white py-4">
-    <div class="container text-center">
+    <footer class="bg-dark text-white py-4">
+      <div class="container text-center">
         <div>
-            <a href="https://www.instagram.com/_aj_.2001/" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/" class="text-white mx-2"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/ajrepos" class="text-white mx-2"><i class="fab fa-github"></i></a>
+          <a
+            href="https://www.linkedin.com/in/tu-perfil"
+            class="text-white mx-2"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="https://github.com/ajrepos" class="text-white mx-2"
+            ><i class="fab fa-github"></i
+          ></a>
         </div>
-        <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#cookiesModal" data-i18n="cookies.button">
-            Ver Política de Cookies
+        <button
+          type="button"
+          class="btn btn-light"
+          data-bs-toggle="modal"
+          data-bs-target="#cookiesModal"
+          data-i18n="cookies.button"
+        >
+          Política de Cookies
         </button>
-        <p class="mt-3">&copy; 2024 Antonio Jesús Alguacil Espejo. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
-    </div>
-</footer>
+        <p class="mt-3">
+          &copy; 2024 Antonio Jesús Alguacil Espejo.
+          <span data-i18n="footer.rights">Todos los derechos reservados.</span>
+        </p>
+      </div>
+    </footer>
 
-<div class="modal fade" id="cookiesModal" tabindex="-1" aria-labelledby="cookiesModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div
+      class="modal fade"
+      id="cookiesModal"
+      tabindex="-1"
+      aria-labelledby="cookiesModalLabel"
+      aria-hidden="true"
+      style="z-index: 1055"
+    >
+      <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="cookiesModalLabel" data-i18n="cookies.title">Política de Cookies</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p data-i18n="cookies.body"></p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-i18n="cookies.close">Cerrar</button>
-            </div>
+          <div class="modal-header">
+            <h5
+              class="modal-title"
+              id="cookiesModalLabel"
+              data-i18n="cookies.title"
+            >
+              Política de Cookies
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p data-i18n="cookies.body"></p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+              data-i18n="cookies.close"
+            >
+              Cerrar
+            </button>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    const translations = {
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const translations = {
         en: {
-            name: "Antonio Jesús Alguacil Espejo",
-            nav: {
-                home: "Home",
-                about: "About Me",
-                projects: "Projects",
-                contact: "Contact"
-            },
-            hero: {
-                title: "Hi, I'm Antonio Jesús Alguacil Espejo",
-                subtitle: "Welcome to my personal portfolio"
-            },
-            about: {
-                title: "About Me",
-                p1: "I am a Full Stack programmer with experience in various languages and technologies. I specialize in both client-side and server-side development, enabling me to create complete and efficient solutions. With skills in Java, PHP, JavaScript, HTML, CSS, and more, I can build robust web applications from backend architecture to frontend user experience.",
-                p2: "My focus is on delivering scalable and well-structured solutions, always following best development practices. I work with relational and non-relational databases and master various tools and frameworks like React, Angular, Spring, Laravel, and Node.js.",
-                p3: "I have experience creating dynamic and optimized applications, integrating APIs, and managing servers and cloud deployment. Additionally, I'm passionate about continuous learning and staying updated with the latest tech trends.",
-                p4: "My goal is to develop technological solutions that not only meet requirements but provide exceptional user experience and exceed client expectations.",
-                programming: "Programming",
-                programmingText: "With solid experience in web and mobile development, I handle key technologies like HTML, CSS, JavaScript, Java, and frameworks like React and Laravel. I focus on creating scalable, optimized solutions for both frontend and backend applications.",
-                design: "Design",
-                designText: "I design intuitive interfaces with a user-centered approach, ensuring accessibility and usability while following the latest web and mobile design trends.",
-                teamwork: "Teamwork",
-                teamworkText: "I thrive in multidisciplinary teams, communicating effectively with designers, developers, and clients to achieve common goals and deliver successful projects."
-            },
-            contactme: "Contact Me",
-            projects: {
-                title: "My Projects",
-                lyraTitle: "LYRA",
-                lyraDesc: "Lyra is a luxury watchmaking brand founded in 2024 in Spain, combining precision engineering with elegant design. Developed using JavaScript, PHP, HTML, and CSS.",
-                lyraExtended: "Each Lyra watch is handcrafted in Switzerland with premium materials, expanding into high-end fashion with Italian-inspired aesthetics and contemporary elegance."
-            },
-            see_more: "See more",
-            see_less: "See less",
-            contact: {
-                title: "Contact",
-                name: "Name",
-                email: "Email",
-                message: "Message",
-                submit: "Send"
-            },
-            footer: {
-                rights: "All rights reserved."
-            },
-            cookies: {
-                title: "Cookie Policy",
-                body: "This website uses cookies to enhance user experience. By continuing to browse, you agree to our use of cookies.",
-                close: "Close",
-                button: "View Cookie Policy"
-            }
+          name: "Antonio Jesús Alguacil Espejo",
+          nav: {
+            home: "Home",
+            about: "About Me",
+            projects: "Projects",
+            contact: "Contact",
+            experience: "Experience",
+          },
+          hero: {
+            title: "Hi, I'm Antonio Jesús Alguacil Espejo",
+            subtitle: "Welcome to my personal portfolio",
+          },
+          about: {
+            title: "About Me",
+            p1: "I am a Full Stack development and cybersecurity specialist with extensive experience in programming and system administration. My expertise ranges from web application development to implementing secure cloud infrastructures, combining cybersecurity skills with DevOps practices.",
+            p2: "Full technical stack mastery including Docker for containerization, AWS for cloud computing, and Cisco networking for enterprise infrastructures. Expert in ethical hacking and penetration testing, implementing proactive security practices in the development lifecycle. Advanced management of relational (MySQL) and non-relational databases with CI/CD integration.",
+            p3: "I have implemented scalable solutions in cloud environments (AWS EC2, S3, Lambda) and on-premise systems using orchestration tools like Kubernetes. Conduct vulnerability analysis and system hardening, applying OWASP methodologies and performing security audits.",
+            p4: "My approach integrates agile development with security by design, creating resilient and optimized microservices architectures. Combine Java/Laravel programming with DevSecOps practices to deliver robust and secure solutions.",
+            programming: "Development & Security",
+            programmingText:
+              "Full Stack with cloud security specialization (AWS, Docker) and ethical hacking expertise. Develop secure applications with React/Laravel, implement enterprise networking (Cisco), and automate deployments with CI/CD pipelines. Advanced pentesting skills using tools like Metasploit and Burp Suite.",
+            design: "Cloud Architecture",
+            designText:
+              "Design scalable AWS infrastructures using services like EC2, S3 and RDS. Implement serverless architectures and Docker/Kubernetes containers, ensuring security compliance and high availability.",
+            teamwork: "Technical Collaboration",
+            teamworkText:
+              "Lead cross-functional teams in Agile/Scrum environments, coordinating developers, pentesters and DevOps engineers. Specialized in technical documentation and knowledge transfer about applied security practices.",
+          },
+          contactme: "Contact Me",
+          projects: {
+            title: "My Projects",
+            lyraTitle: "LYRA",
+            lyraDesc:
+              "Lyra is a luxury watchmaking brand founded in 2024 in Spain, combining precision engineering with elegant design. Developed using JavaScript, PHP, HTML, and CSS.",
+            lyraExtended:
+              "Each Lyra watch is handcrafted in Switzerland with premium materials, expanding into high-end fashion with Italian-inspired aesthetics and contemporary elegance.",
+          },
+          see_more: "See more",
+          see_less: "See less",
+          contact: {
+            title: "Contact",
+            name: "Name",
+            email: "Email",
+            message: "Message",
+            submit: "Send",
+          },
+          experience: {
+            title: "Experience",
+            imibic: "IMIBIC",
+            webdev: "Web development",
+            pentesting: "Pentesting and security",
+            databases: "Database management",
+            servers: "Server setup and configuration",
+            tutoring: "Private Tutoring Teacher",
+            subjects:
+              "Programming, Networking, Cybersecurity, Office Suite, Databases, Cloud Computing",
+            students: "+20 students trained",
+            preparation: "Preparation for certifications and school exams",
+            internshipDuration: "3-month internship",
+            tutoringDuration: "2 years",
+          },
+          footer: {
+            rights: "All rights reserved.",
+          },
+          cookies: {
+            title: "Cookie Policy",
+            body: "This website uses technical cookies to ensure basic functionality and analytics cookies to analyze traffic. No third-party cookies are used. You can manage your preferences in your browser settings.", // Texto completo
+            close: "Close",
+            button: "Cookie Policy",
+          },
+          education: {
+            title: "Education",
+            formal: "Formal Education",
+            eso: "Secondary Education",
+            cfgs: "Vocational Training - Computer Systems",
+            complementary: "Additional Training",
+          },
+          skills: {
+            title: "Skills",
+            technical: "Technical Skills",
+            soft: "Soft Skills",
+            teamwork: "Teamwork",
+            languages: "Languages",
+            english: "English - B1 Level",
+          },
         },
         es: {
-            name: "Antonio Jesús Alguacil Espejo",
-            nav: {
-                home: "Inicio",
-                about: "Sobre mí",
-                projects: "Proyectos",
-                contact: "Contacto"
-            },
-            hero: {
-                title: "Hola, soy Antonio Jesús Alguacil Espejo",
-                subtitle: "Bienvenido a mi portafolio personal"
-            },
-            about: {
-                title: "Sobre mí",
-                p1: "Soy un programador Full Stack con experiencia en diversos lenguajes y tecnologías. Me especializo en desarrollo tanto del lado del cliente como del servidor, creando soluciones completas y eficientes. Con habilidades en Java, PHP, JavaScript, HTML, CSS y más, construyo aplicaciones web robustas.",
-                p2: "Mi enfoque es ofrecer soluciones escalables y bien estructuradas, siguiendo las mejores prácticas. Trabajo con bases de datos relacionales y no relacionales, y domino herramientas como React, Angular, Spring, Laravel y Node.js.",
-                p3: "Tengo experiencia creando aplicaciones dinámicas, integrando APIs y gestionando servidores en la nube. Me apasiona aprender y mantenerme actualizado con las últimas tendencias tecnológicas.",
-                p4: "Mi objetivo es desarrollar soluciones tecnológicas que superen expectativas y ofrezcan una experiencia de usuario excepcional.",
-                programming: "Programación",
-                programmingText: "Con experiencia en desarrollo web y móvil, manejo tecnologías clave como HTML, CSS, JavaScript, Java y frameworks como React y Laravel, creando soluciones escalables y optimizadas.",
-                design: "Diseño",
-                designText: "Diseño interfaces intuitivas centradas en la experiencia del usuario, asegurando accesibilidad y alineación con las últimas tendencias en diseño web y móvil.",
-                teamwork: "Trabajo en equipo",
-                teamworkText: "Disfruto trabajar en equipos multidisciplinarios, comunicándome efectivamente para lograr objetivos comunes y entregar proyectos exitosos."
-            },
-            contactme: "Contáctame",
-            projects: {
-                title: "Mis Proyectos",
-                lyraTitle: "LYRA",
-                lyraDesc: "Lyra es una marca de relojería de lujo fundada en 2024 en España, combinando ingeniería de precisión con diseño elegante. Desarrollado con JavaScript, PHP, HTML y CSS.",
-                lyraExtended: "Cada reloj Lyra es fabricado a mano en Suiza con materiales premium, expandiéndose hacia la moda de alta gama con estética italiana y elegancia contemporánea."
-            },
-            see_more: "Ver más",
-            see_less: "Ver menos",
-            contact: {
-                title: "Contacto",
-                name: "Nombre",
-                email: "Correo Electrónico",
-                message: "Mensaje",
-                submit: "Enviar"
-            },
-            footer: {
-                rights: "Todos los derechos reservados."
-            },
-            cookies: {
-                title: "Política de Cookies",
-                body: "Este sitio web utiliza cookies para mejorar la experiencia de usuario. Al continuar navegando, aceptas nuestro uso de cookies.",
-                close: "Cerrar",
-                button: "Ver Política de Cookies"
-            }
-        }
-    };
+          name: "Antonio Jesús Alguacil Espejo",
+          nav: {
+            home: "Inicio",
+            about: "Sobre mí",
+            projects: "Proyectos",
+            contact: "Contacto",
+            experience: "Experiencia",
+          },
+          hero: {
+            title: "Hola, soy Antonio Jesús Alguacil Espejo",
+            subtitle: "Bienvenido a mi portafolio personal",
+          },
+          about: {
+            title: "Sobre mí",
+            p1: "Soy un especialista en desarrollo Full Stack y seguridad informática con amplia experiencia en programación y administración de sistemas. Mi expertise abarca desde el desarrollo de aplicaciones web hasta la implementación de infraestructuras cloud seguras, combinando habilidades en cybersecurity y DevOps.",
+            p2: "Dominio completo del stack tecnológico incluyendo Docker para containerización, AWS para cloud computing, y redes Cisco para infraestructuras empresariales. Experto en ethical hacking y pentesting, implementando prácticas de seguridad proactivas en el ciclo de desarrollo. Manejo avanzado de BBDD relacionales (MySQL) y no relacionales, con integración CI/CD.",
+            p3: "He implementado soluciones escalables en entornos cloud (AWS EC2, S3, Lambda) y on-premise, utilizando herramientas de orchestration como Kubernetes. Realizo análisis de vulnerabilidades y hardening de sistemas, aplicando metodologías OWASP y realizando auditorías de seguridad.",
+            p4: "Mi enfoque integra desarrollo ágil con seguridad by design, creando arquitecturas microservicios resilientes y optimizadas. Combino programación en Java/Laravel con prácticas DevSecOps para entregar soluciones robustas y seguras.",
+            programming: "Desarrollo y Seguridad",
+            programmingText:
+              "Full Stack con especialización en cloud security (AWS, Docker) y ethical hacking. Desarrollo aplicaciones seguras con React/Laravel, implemento redes empresariales (Cisco), y automatizo despliegues con pipelines CI/CD. Manejo avanzado de pentesting con herramientas como Metasploit y Burp Suite.",
+            design: "Arquitectura Cloud",
+            designText:
+              "Diseño infraestructuras escalables en AWS usando servicios como EC2, S3 y RDS. Implemento arquitecturas serverless y contenedores Docker/Kubernetes, asegurando compliance con estándares de seguridad y alta disponibilidad.",
+            teamwork: "Colaboración Técnica",
+            teamworkText:
+              "Lidero equipos multidisciplinares en entornos Agile/Scrum, coordinando desarrolladores, pentesters y DevOps. Especializado en documentación técnica y transferencia de conocimiento sobre seguridad aplicada.",
+          },
+          contactme: "Contáctame",
+          projects: {
+            title: "Mis Proyectos",
+            lyraTitle: "LYRA",
+            lyraDesc:
+              "Lyra es una marca de relojería de lujo fundada en 2024 en España, combinando ingeniería de precisión con diseño elegante. Desarrollado con JavaScript, PHP, HTML y CSS.",
+            lyraExtended:
+              "Cada reloj Lyra es fabricado a mano en Suiza con materiales premium, expandiéndose hacia la moda de alta gama con estética italiana y elegancia contemporánea.",
+          },
+          see_more: "Ver más",
+          see_less: "Ver menos",
+          contact: {
+            title: "Contacto",
+            name: "Nombre",
+            email: "Correo Electrónico",
+            message: "Mensaje",
+            submit: "Enviar",
+          },
+          experience: {
+            title: "Experiencia",
+            imibic: "IMIBIC",
+            webdev: "Desarrollo web",
+            pentesting: "Pentesting y seguridad",
+            databases: "Gestión de bases de datos",
+            servers: "Montaje y configuración de servidores",
+            tutoring: "Profesor de Clases particulares",
+            subjects:
+              "Programación, Redes, Ciberseguridad, Ofimática, Bases de datos, Cloud computing",
+            students: "+20 alumnos formados",
+            preparation:
+              "Preparación para certificaciones y exámenes escolares",
+            internshipDuration: "3 meses de prácticas",
+            tutoringDuration: "2 años",
+          },
+          footer: {
+            rights: "Todos los derechos reservados.",
+          },
+          cookies: {
+            title: "Política de Cookies",
+            body: "Este sitio web utiliza cookies técnicas para garantizar el funcionamiento básico y cookies de análisis para medir el tráfico. No empleamos cookies de terceros. Puede gestionar sus preferencias en la configuración de su navegador.", // Texto completo
+            close: "Cerrar",
+            button: "Política de Cookies",
+          },
+          education: {
+            title: "Formación",
+            formal: "Educación Reglada",
+            eso: "Educación Secundaria Obligatoria (ESO)",
+            cfgs: "Ciclo Formativo - Sistemas Microinformáticos y Redes",
+            complementary: "Formación Complementaria",
+          },
+          skills: {
+            title: "Habilidades",
+            technical: "Habilidades Técnicas",
+            soft: "Habilidades Blandas",
+            teamwork: "Trabajo en equipo",
+            languages: "Idiomas",
+            english: "Inglés - Nivel B1",
+          },
+        },
+      };
+      document.addEventListener("DOMContentLoaded", function () {
+        let currentLang = "es";
+        const toggleButton = document.getElementById("languageToggle");
 
-   
-    document.addEventListener('DOMContentLoaded', function() {
-        let currentLang = 'es';
-        const toggleButton = document.getElementById('languageToggle');
-        
         // Nueva función para manejar el toggle de la descripción
         function toggleDescription() {
-            const descripcion = document.getElementById("descripcionExtendida");
-            const boton = document.getElementById("verMasBtn");
-            
-            if (descripcion.style.display === "none") {
-                descripcion.style.display = "block";
-                boton.textContent = translations[currentLang].see_less;
-            } else {
-                descripcion.style.display = "none";
-                boton.textContent = translations[currentLang].see_more;
-            }
+          const descripcion = document.getElementById("descripcionExtendida");
+          const boton = document.getElementById("verMasBtn");
+
+          if (descripcion.style.display === "none") {
+            descripcion.style.display = "block";
+            boton.textContent = translations[currentLang].see_less;
+          } else {
+            descripcion.style.display = "none";
+            boton.textContent = translations[currentLang].see_more;
+          }
         }
 
         function updateTranslations(lang) {
-            document.documentElement.lang = lang;
-            toggleButton.textContent = lang === 'es' ? 'English' : 'Español';
-            
-            document.querySelectorAll('[data-i18n]').forEach(element => {
-                const keys = element.getAttribute('data-i18n').split('.');
-                let translation = translations[lang];
-                keys.forEach(key => translation = translation?.[key]);
-                
-                if (translation) {
-                    if (element.tagName === 'INPUT' && element.type === 'submit') {
-                        element.value = translation;
-                    } else {
-                        element.textContent = translation;
-                    }
-                }
-            });
+          document.documentElement.lang = lang;
+          toggleButton.textContent = lang === "es" ? "English" : "Español";
 
-            // Actualizar estado del botón "Ver más"
-            const descExt = document.getElementById("descripcionExtendida");
-            const verMasBtn = document.getElementById("verMasBtn");
-            if (descExt.style.display === 'block') {
-                verMasBtn.textContent = translations[lang].see_less;
-            } else {
-                verMasBtn.textContent = translations[lang].see_more;
+          document.querySelectorAll("[data-i18n]").forEach((element) => {
+            const keys = element.getAttribute("data-i18n").split(".");
+            let translation = translations[lang];
+            keys.forEach((key) => (translation = translation?.[key]));
+
+            if (translation) {
+              if (element.tagName === "INPUT" && element.type === "submit") {
+                element.value = translation;
+              } else {
+                element.textContent = translation;
+              }
             }
+          });
+
+          // Actualizar estado del botón "Ver más"
+          const descExt = document.getElementById("descripcionExtendida");
+          const verMasBtn = document.getElementById("verMasBtn");
+          if (descExt.style.display === "block") {
+            verMasBtn.textContent = translations[lang].see_less;
+          } else {
+            verMasBtn.textContent = translations[lang].see_more;
+          }
         }
 
         // Event listeners
-        toggleButton.addEventListener('click', () => {
-            currentLang = currentLang === 'es' ? 'en' : 'es';
-            updateTranslations(currentLang);
+        toggleButton.addEventListener("click", () => {
+          currentLang = currentLang === "es" ? "en" : "es";
+          updateTranslations(currentLang);
         });
-        
-        document.getElementById("verMasBtn").addEventListener('click', toggleDescription);
+
+        document
+          .getElementById("verMasBtn")
+          .addEventListener("click", toggleDescription);
 
         updateTranslations(currentLang);
-    });
-</script>
-</body>
+      });
+    </script>
+  </body>
 </html>
