@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.justificado {
+  text-align: justify;
+}
+
+.skill-badge {
+  margin: 2px;
+}
+
+.modal-backdrop.show {
+  z-index: 1040 !important;
+}
+
+.modal {
+  z-index: 1055 !important;
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
+/* Tamaño uniforme para imágenes de proyectos */
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Tarjetas independientes - SOLO crece la que se expande */
+/* Estas reglas SOLO aplican a la sección de proyectos */
+#proyectos .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+#proyectos .row > [class*="col-"] {
+  display: block;
+}
+
+#proyectos .card {
+  height: auto !important;
+  min-height: 380px !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+#proyectos .card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+#proyectos .card-body button {
+  margin-top: auto;
+}

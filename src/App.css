@@ -1,0 +1,84 @@
+.justificado {
+  text-align: justify;
+}
+
+.skill-badge {
+  margin: 2px;
+}
+
+.modal-backdrop.show {
+  z-index: 1040 !important;
+}
+
+.modal {
+  z-index: 1055 !important;
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
+/* Asegurar que las imágenes se vean bien */
+.rounded-circle {
+  object-fit: cover;
+}
+
+/* Estilos para las tarjetas */
+.card {
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Estilos para los badges */
+.badge {
+  font-size: 0.875rem;
+  padding: 0.5rem 0.75rem;
+  font-weight: 500;
+}
+
+/* Estilos para el navbar */
+.navbar-nav .nav-link {
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  opacity: 0.8;
+}
+
+/* Estilos para la sección hero */
+#inicio {
+  position: relative;
+}
+
+#inicio h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+#inicio .lead {
+  font-size: 1.5rem;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  #inicio h1 {
+    font-size: 1.8rem;
+  }
+  
+  #inicio .lead {
+    font-size: 1.1rem;
+  }
+  
+  .rounded-circle {
+    width: 180px !important;
+    height: 220px !important;
+  }
+}
