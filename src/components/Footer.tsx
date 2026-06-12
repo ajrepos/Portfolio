@@ -8,9 +8,14 @@ const Footer: React.FC = () => {
     <footer className="bg-dark text-white py-4">
       <div className="container text-center">
         <div>
-          {/* <a href="https://www.linkedin.com/in/tu-perfil" className="text-white mx-2" target="_blank" rel="noopener noreferrer">
-  <i className="fab fa-linkedin"></i>
-</a> */}
+          <a 
+            href="https://es.linkedin.com/in/antonio-jes%C3%BAs-alguacil-espejo-72a090416" 
+            className="text-white mx-2" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <i className="fab fa-linkedin"></i>
+          </a>
           <a
             href="https://github.com/ajrepos"
             className="text-white mx-2"
